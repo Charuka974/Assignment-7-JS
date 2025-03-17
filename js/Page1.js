@@ -13,7 +13,7 @@ $(document).ready(function(){
         if (!interval) {
             interval = setInterval(switchHumans, 1000);
         }
-    });
+    }); 
 
     $(".stop").click(function(){
         clearInterval(interval);

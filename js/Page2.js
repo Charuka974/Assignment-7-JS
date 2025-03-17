@@ -29,25 +29,28 @@
 $(document).ready(function(){
     let boxes = document.querySelectorAll('.box');
     console.log(boxes);
-    
     let interval;
+
+    function animation() {
+        let lastBoxColor = $(boxes[boxes.length - 1]).css("background-color");
+
+        for (let index = boxes.length - 1; index > 0; index--) {
+            $(boxes[index]).css("background-color", $(boxes[index - 1]).css("background-color"));
+        }
+
+        $(boxes[0]).css("background-color", lastBoxColor);
+        
+    }
+
     $(".start").click(function(){
-        animation();
+        if (!interval) {
+            interval = setInterval(animation, 500);
+        }
     });
 
     $(".stop").click(function(){
         clearInterval(interval);
+        interval = null;
     });
 
-    function animation() {
-         interval = setInterval(() => {
-            let lastBoxColor = $(boxes[boxes.length - 1]).css("background-color");
-
-            for (let index = boxes.length - 1; index > 0; index--) {
-                $(boxes[index]).css("background-color", $(boxes[index - 1]).css("background-color"));
-            }
-
-            $(boxes[0]).css("background-color", lastBoxColor);
-        }, 500);
-    }
 });
