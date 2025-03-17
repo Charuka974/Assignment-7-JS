@@ -1,0 +1,74 @@
+body{
+    background-color: RGB(233, 231, 230);
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: RGB(233, 231, 230);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 5vw;
+}
+h1{
+    text-align: center;
+    color: rgb(219, 23, 23);
+}
+.house-img{
+    width: 250px;
+}
+.human-container-class{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+.man-container{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+}
+.man-img{
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+}
+.man-id{
+    color: rgb(20, 192, 192);
+    font-size: 1.5rem;
+    position: relative;
+    transform: translateX(-15px);
+}
+.house-img-container{
+    position: relative;
+    transform: translateY(-40px);
+}
+.controls{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 70vh;
+}
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    margin: 0 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px black;
+}
+.start{
+    background-color: green;
+}
+.stop{
+    background-color: red;
+}

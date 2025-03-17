@@ -45,7 +45,7 @@ $(document).ready(function(){
 
             for (let index = boxes.length - 1; index > 0; index--) {
                 $(boxes[index]).css("background-color", $(boxes[index - 1]).css("background-color"));
-            }//property name & value
+            }
 
             $(boxes[0]).css("background-color", lastBoxColor);
         }, 500);
