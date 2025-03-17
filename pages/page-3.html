@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page-3</title>
+    <style>
+        body{
+            background-color: black;
+            color: red;
+            text-align: center;
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .middle-container{
+            display: flex;
+            flex-direction: row;
+            gap: 2vw;
+            color: rgb(222, 184, 184);
+        }
+        .box{
+            width: 10vw;
+            height: 5vh;
+            background-color: white;
+            border-radius: 5px;
+        }
+        button{
+            margin: 5vh 20px;
+            color: white;
+            font-weight: bold;
+            width: 60px;
+            height: 30px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px white;
+        }
+        .start-btn{
+            background-color: blue;
+        }
+        .stop-btn{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Knight Rider</h1>
+    <div class="container">
+        <div class="devide-line"></div>
+        <div class="middle-container">
+            <div class="box box-1"></div>
+            <div class="box box-2"></div>
+            <div class="box box-3"></div>
+            <div class="box box-4"></div>
+            <div class="box box-5"></div>
+            <div class="box box-6"></div>
+            <div class="box box-7"></div>
+        </div>
+        <div class="devide-line"></div>
+
+        <button id="start" class="start-btn">Start</button>
+        <button id="stop" class="stop-btn">Stop</button>
+    </div>
+
+    <audio src="/assets/page-3/knight rider kitt scanner audio.mp3"></audio>
+
+    <script>
+        let boxes = document.querySelectorAll(".box");
+        let index = 0;  
+        let direction = 1;  
+        let interval;
+        let audio = document.querySelector("audio");
+
+        function changeColor() {
+            // Reset all boxes to white
+            boxes.forEach(function(box) {
+                box.style.backgroundColor = "white";
+            });
+
+            // Apply red color to the current index
+            boxes[index].style.backgroundColor = "red";
+
+            // Determine next position
+            index += direction;
+
+            // Reverse direction if at the end or beginning
+            if (index === boxes.length - 1 || index === 0) {
+                direction *= -1;
+            }
+        }
+
+        // Event listener for the Start button
+        document.getElementById("start").addEventListener("click", function() {
+            if (!interval) {  // Prevent starting multiple intervals
+                interval = setInterval(changeColor, 100);  // Run function every 300ms
+                audio.loop = true; // Enable looping
+                audio.play(); // Play the audio
+            }
+        });
+
+        // Event listener for the Stop button
+        document.getElementById("stop").addEventListener("click", function() {
+            clearInterval(interval);  // Stop the interval
+            interval = null;  // Reset interval variable
+            audio.pause(); // Pause the audio
+            audio.currentTime = 0; // Reset audio to the beginning
+        });
+    </script>
+    
+</body>
+</html>

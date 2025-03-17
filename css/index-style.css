@@ -1,0 +1,41 @@
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+ol{
+    margin-top: 100px;
+    text-align: center;
+    list-style: none;
+}
+
+ol > li{
+    margin: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+ol > li > a {
+    display: inline-block; /* we have to use this to increase scale */
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: black;
+    box-shadow: 5px 5px 10px rgb(65, 71, 65);
+    padding: 10px 50px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, font-weight 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+ol > li > a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 5px 5px 10px green;
+    transform: scale(1.2); 
+    font-weight: 900;
+}
+

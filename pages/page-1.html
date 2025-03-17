@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page-1</title>
+    <style>
+        body{
+            background-color: RGB(233, 231, 230);
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            background-color: RGB(233, 231, 230);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1{
+            text-align: center;
+            color: rgb(219, 23, 23);
+        }
+        .house-img{
+            width: 250px;
+        }
+        .human-container-class{
+            display: flex;
+            flex-direction: row;
+        }
+        .man-container{
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+            height: auto;
+            width: auto;
+        }
+        .man-img{
+            width: 70px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .man-id{
+            color: rgb(9, 231, 231);
+            position: relative;
+            transform: translateX(-15px);
+        }
+        .house-img-container{
+            position: relative;
+            transform: translateY(-40px);
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Que</h1>
+
+    <div class="container">
+        <div id="human-container" class="human-container-class">
+            <div id="man-a-container" class="man-container">
+                <img id="man-a" class="man-img" src="/assets/page-1/walking office man.gif" alt="">
+                <span class="man-id">A</span>
+            </div>
+            <div id="man-b-container" class="man-container">
+                <img id="man-b" class="man-img" src="/assets/page-1/walking office man.gif" alt="">
+                <span class="man-id">B</span>
+            </div>
+            <div id="man-c-container" class="man-container">
+                <img id="man-c" class="man-img" src="/assets/page-1/walking office man.gif" alt="">
+                <span class="man-id">C</span>
+            </div>
+            <div id="man-d-container" class="man-container">
+                <img id="man-d" class="man-img" src="/assets/page-1/walking office man.gif" alt="">
+                <span class="man-id">D</span>
+            </div>
+            <div id="man-e-container" class="man-container">
+                <img id="man-e" class="man-img" src="/assets/page-1/walking office man.gif" alt="">
+                <span class="man-id">E</span>
+            </div>
+            <div id="man-f-container" class="man-container">
+                <img id="man-f" class="man-img" src="/assets/page-1/walking office man.gif" alt="">
+                <span class="man-id">F</span>
+            </div>
+        </div>
+        
+    
+        <div id="house-container" class="house-img-container">
+            <img id="house" class="house-img" src="/assets/page-1/house day and night 2.gif" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>
