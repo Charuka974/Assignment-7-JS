@@ -10,6 +10,7 @@ $(document).ready(function(){
     }
 
     $(".start").click(function(){
+        // console.log(interval);
         if (!interval) {
             interval = setInterval(switchHumans, 1000);
         }

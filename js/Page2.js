@@ -13,7 +13,7 @@
 //     let index6 = (index - 5 + boxes.length) % boxes.length;
 
 
-//     boxes[index1].style.backgroundColor = "green";
+//     boxes[index1].style.backgroundColor = "green"; 
 //     boxes[index2].style.backgroundColor = "red";
 //     boxes[index3].style.backgroundColor = "rgb(203, 71, 93)";
 //     boxes[index4].style.backgroundColor = "rgb(255, 191, 205)";
